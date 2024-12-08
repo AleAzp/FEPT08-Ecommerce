@@ -4,6 +4,7 @@ import Products from './vistas/Products.vue'
 import Cart from './vistas/Cart.vue'
 import NotFound from './vistas/NotFound.vue'
 import User from './vistas/User.vue'
+import Help from './vistas/Help.vue'
 
 const routes = [
     {   path: "/",
@@ -18,6 +19,9 @@ const routes = [
     {   path: "/cart",
         name: "Cart",
         component: Cart},
+    {   path: "/help",
+        name: "Help",
+        component: Help},
     
 ]
 
