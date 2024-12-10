@@ -4,12 +4,29 @@ import Products from './vistas/Products.vue'
 import Cart from './vistas/Cart.vue'
 import NotFound from './vistas/NotFound.vue'
 import User from './vistas/User.vue'
-import Help from './vistas/Help.vue'
+import AllProducts from './vistas/AllProducts.vue'
+import Jewelry from './vistas/Jewelry.vue'
+import MenCothing from './vistas/MenCothing.vue'
+import WomanClothing from './vistas/WomanClothing.vue'
 
 const routes = [
     {   path: "/",
+        redirect: "/products/all",
         name: "Products",
-        component: Products},
+        component: Products,
+        children: [
+            {   path: "/products/all",
+                name: "All Products",
+                component: AllProducts},
+            {   path: "/products/jewelry",
+                name: "Jewelry",
+                component: Jewelry},
+            {   path: "/products/menclothing",
+                name: "Men's Clothing",
+                component: MenCothing},
+            {   path: "/products/womanclothing",
+                name: "WomanClorhing",
+                component: WomanClothing}]},
     {   path: "/user",
         name: "User",
         component: User},
@@ -19,9 +36,8 @@ const routes = [
     {   path: "/cart",
         name: "Cart",
         component: Cart},
-    {   path: "/help",
-        name: "Help",
-        component: Help},
+
+    
     
 ]
 

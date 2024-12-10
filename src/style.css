@@ -7,13 +7,19 @@
     @apply poppins-medium text-grayColor
   }
   .activeLink{
-    @apply poppins-bold text-secondaryColor
+    @apply poppins-bold text-secondaryColor 
+  }
+  .activeLinkCategories{
+    @apply poppins-bold text-redColor underline 
   }
   .buttonSearch{
-    @apply p-2 rounded-3xl px-4 poppins-medium hover:bg-hoverColor bg-primaryColor uppercase
+    @apply p-2 rounded-3xl px-4 poppins-medium active:bg-secondaryColor bg-primaryColor text-secondaryColor active:text-whiteColor uppercase text-xs sm:text-base
+  }
+  .inputText{
+    @apply w-44 sm:w-64 border p-2 rounded-3xl px-9 text-secondaryColor border-secondaryColor text-sm sm:text-base
   }
   .numberChart{
-    @apply poppins-bold text-redColor  bg-whiteColor lg:py-6 lg:px-6 lg:w-24 py-3 px-4 md:py-4 md:px-4 md:w-16 rounded-md text-sm lg:text-4xl md:text-xl shadow-md w-12
+    @apply poppins-bold text-redColor  bg-whiteColor lg:py-6 lg:px-6 lg:w-24 py-3 px-4 md:py-4 md:px-4 md:w-16 rounded-md text-sm lg:text-4xl md:text-xl shadow md:shadow-md w-12
   }
   .numberTitle{
     @apply poppins-bold lg:text-base md:text-sm text-[11px]
@@ -21,7 +27,9 @@
   .navFooter{
     @apply text-secondaryColor poppins-medium
   }
-
+  .navCategories{
+    @apply poppins-medium text-grayColor text-sm sm:text-base
+  }
 }
 
 
