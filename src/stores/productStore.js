@@ -6,6 +6,15 @@ export const useProductsAllStore = defineStore('productAll',{
         error: false,
         products: [] 
     }),
+    getters: {  
+      filterProducts:(state) => state.products,
+      filterJewelery: (state) => {return state.products.filter(e => e.category === "jewelery");},
+      filterMen: (state) => {return state.products.filter(e => e.category === "men's clothing");},
+      filterWoman: (state) => {return state.products.filter(e => e.category === "women's clothing");},
+      filterElectronics: (state) => {return state.products.filter(e => e.category === "electronics");},
+
+    },
+  
     actions:{
         async getProducts() {
             this.loading = true;

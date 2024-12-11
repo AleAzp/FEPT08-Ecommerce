@@ -7,8 +7,12 @@
                     <div class="">All</div>
                     </router-link></li>
         
-                    <li class="navCategories"><router-link to="/products/jewelry" exact-active-class="activeLinkCategories">
-                    <div>Jewelry</div>
+                    <li class="navCategories"><router-link to="/products/jewelery" exact-active-class="activeLinkCategories">
+                    <div>Jewelery</div>
+                    </router-link></li>
+
+                    <li class="navCategories"><router-link to="/products/electronics" exact-active-class="activeLinkCategories">
+                    <div>Electronics</div>
                     </router-link></li>
 
                     <li class="navCategories"><router-link to="/products/menclothing" exact-active-class="activeLinkCategories">

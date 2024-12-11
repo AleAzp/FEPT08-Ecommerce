@@ -1,4 +1,4 @@
-<template> 
+<template>
     <div v-for="product in products" :key="product.id" class="bg-whiteColor drop-shadow-md p-8 text-center rounded-lg">
         <img class="h-48 mb-8 mx-auto my-auto block" :src="product.image" alt="producto">
         <h3 class="poppins-semibold text-left text-md"> {{product.title}} </h3>
@@ -8,6 +8,8 @@
                     <button class="text-whiteColor bg-hoverColor active:bg-secondaryColor py-3 px-4 rounded-lg"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>    
     </div>
+
+    
   </template>
 
 <script>
@@ -15,18 +17,16 @@ import { useProductsAllStore } from '../stores/productStore';
 
 export default {
     name: "ProductCard",
-    setup() {
-    const productStore = useProductsAllStore();
-
-    // Load products on mount
-    if (!productStore.products.length) {
-      productStore.getProducts();
-    }
-
-    return {
-      products: productStore.products,
-    };
-  },
+    props: {
+        products: {
+            type: Array,
+            required: true
+        },},
+    computed:{
+        productStore(){
+            return useProductsAllStore();
+        }
+    },
 };
 </script>
 
