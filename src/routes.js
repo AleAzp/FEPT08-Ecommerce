@@ -5,9 +5,10 @@ import Cart from './vistas/Cart.vue'
 import NotFound from './vistas/NotFound.vue'
 import User from './vistas/User.vue'
 import AllProducts from './vistas/AllProducts.vue'
-import Jewelry from './vistas/Jewelry.vue'
+import Jewelery from './vistas/Jewelery.vue'
 import MenCothing from './vistas/MenCothing.vue'
 import WomanClothing from './vistas/WomanClothing.vue'
+import Electronics from './vistas/Electronics.vue'
 
 const routes = [
     {   path: "/",
@@ -18,12 +19,15 @@ const routes = [
             {   path: "/products/all",
                 name: "All Products",
                 component: AllProducts},
-            {   path: "/products/jewelry",
-                name: "Jewelry",
-                component: Jewelry},
+            {   path: "/products/jewelery",
+                name: "Jewelery",
+                component: Jewelery},
             {   path: "/products/menclothing",
                 name: "Men's Clothing",
                 component: MenCothing},
+            {   path: "/products/electronics",
+                name: "Elecronics",
+                component: Electronics},
             {   path: "/products/womanclothing",
                 name: "WomanClorhing",
                 component: WomanClothing}]},

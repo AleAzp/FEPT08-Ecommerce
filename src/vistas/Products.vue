@@ -1,13 +1,14 @@
 <template>
-    <div class="mt-14 sm:mt-0 sm:mx-12 md:mx-24">
-        <div class="relative">
-            <img class="w-full hidden sm:flex" :src="banner2" alt="banner" />
+    <div>
+        <div class="relative mx-6">
+            <img class="hidden sm:flex rounded-lg" :src="banner2" alt="banner" />
+            <img class="sm:hidden rounded-lg" :src="banner3" alt="banner" />
             <div class="flex flex-col absolute inset-0 items-center justify-center ">
             <Countdown></Countdown>
             </div>
         </div> 
     </div>
-    <SearchBar class="mt-14 sm:mt-0"></SearchBar>
+    <SearchBar class=""></SearchBar>
     <div class="flex flex-row justify-between items-top">
         <NavCategories></NavCategories>
         <Filter class="mr-6 sm:mr-12 md:mr-24"></Filter>
@@ -23,24 +24,27 @@
 <script>
 import banner from '../assets/banner.png';
 import banner2 from '../assets/banner2.png';
+import banner3 from '../assets/banner3.png';
 import SearchBar from "../components/SearchBar.vue";
 import Countdown from "../components/Countdown.vue";
 import NavCategories from '../components/NavCategories.vue';
 import AllProducts from './AllProducts.vue';
 import MenCothing from './MenCothing.vue';
 import WomanClothing from './WomanClothing.vue';
-import Jewelry from './Jewelry.vue';
+import Jewelery from './Jewelery.vue';
+import Electronics from './Electronics.vue';
 import Filter from '../components/Filter.vue';
 
 export default {
     name : "Products",
     components: {
-    SearchBar, Countdown, NavCategories, AllProducts, Jewelry, WomanClothing, MenCothing, Filter
+    SearchBar, Countdown, NavCategories, AllProducts, Jewelery, WomanClothing, MenCothing, Filter, Electronics
   },
     data(){
         return {
             banner: banner,
-            banner2: banner2
+            banner2: banner2,
+            banner3: banner3
 
         }
     },

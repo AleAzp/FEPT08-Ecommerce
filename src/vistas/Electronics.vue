@@ -6,7 +6,7 @@
         <p>error...</p>
     </div>
     <div class="mt-4 grid mx-6 sm:mx-12 md:mx-24 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-6">
-        <ProductCard :products="productStore.filterMen"/>
+        <ProductCard :products="productStore.filterElectronics"/>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
 import ProductCard from '../components/ProductCard.vue';
 import { useProductsAllStore} from '../stores/productStore';
 export default {
-    name : "MenClothing",
+    name : "Jewelery",
     components:{
         ProductCard
     },
@@ -23,7 +23,7 @@ export default {
             return useProductsAllStore();
         },
         allProducts() {
-        return this.productStore.filterMen; 
+        return this.productStore.filterElectronics; 
         },
     },
     mounted() {

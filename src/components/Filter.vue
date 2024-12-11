@@ -1,6 +1,6 @@
 
 <template>
-  <div class="dropdown border py-2 px-2 rounded-lg poppins-medium text-secondaryColor border-secondaryColor " @click="toggleDropdown">
+  <div class="absolute right-0 dropdown border py-2 px-2 rounded-lg poppins-medium text-secondaryColor border-secondaryColor " @click="toggleDropdown">
     <button class="flex flex-row relative gap-2 items-center dropdown-btn text-center">
         <i class="fa-solid fa-sliders"></i>
         <div class="hidden sm:flex">{{ selectedOption || 'Filters' }}</div>
@@ -33,6 +33,7 @@ export default {
   methods: {
     toggleDropdown() {
       this.isOpen = !this.isOpen;
+      
     },
     selectOption(option) {
       this.selectedOption = option;
