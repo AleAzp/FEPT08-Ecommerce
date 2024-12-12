@@ -8,16 +8,13 @@
             </div>
         </div> 
     </div>
-    <SearchBar class=""></SearchBar>
-    <div class="flex flex-row justify-between items-top">
+    <SearchBar></SearchBar>
+    <div class="flex flex-col sm:flex-row justify-between items-top gap-4 sm:gap-0 sm:mb-4">
         <NavCategories></NavCategories>
-        <Filter class="mr-6 sm:mr-12 md:mr-24"></Filter>
+        <Filter class="sm:absolute z-10 sm:right-0 mx-6 sm:mr-12 md:mr-24"></Filter>
     </div>
     
     <router-view></router-view>
-    
-
-    
 
 </template>
 

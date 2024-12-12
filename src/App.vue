@@ -1,5 +1,5 @@
 <template>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col ">
   <header class="flex flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 py-4 bg-white">
     <img class="hidden sm:flex h-12" src="./assets/logo.png" alt="logo my ecommerce">
     <img class="h-8 sm:hidden" src="./assets/logo_xs.png" alt="logo my ecommerce">
@@ -10,7 +10,7 @@
           <i class="fa-solid fa-shirt md:hidden"></i>
         </router-link></li>
         <li class="navMain"><router-link to="/cart" active-class="activeLink">
-          <div class="hidden md:flex">My card</div>
+          <div class="hidden md:flex">My cart</div>
           <i class="fa-solid fa-cart-shopping md:hidden"></i>
         </router-link></li>
         <li class="navMain"><router-link to="/user" active-class="activeLink">
@@ -25,7 +25,7 @@
   
   
 
-  <footer class="bg-primaryColor py-10">
+  <footer class="bg-primaryColor py-10 mt-8">
     <div class="flex flex-col sm:flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 mb-10">
       <img class="hidden sm:flex h-10" src="./assets/logo2.png" alt="logo my ecommerce">
       <img class="sm:hidden h-10" src="./assets/logo_xs_2.png" alt="logo my ecommerce">
@@ -36,7 +36,7 @@
       </ul>
     </div>
     <div class="flex flex-col sm:flex-row justify-between items-center center sm:mx-12 md:mx-24 gap-6 text-center">
-      <p class="hidden sm:visible poppins-light text-xs">©2024 Final project frontend bootcamp. Codeop.</p> 
+      <p class="hidden sm:flex poppins-light text-xs">©2024 Final project frontend bootcamp. Codeop.</p> 
       <ul class="flex flex-row gap-4 items-center">
         <i class="fa-brands fa-instagram fa-md text-secondaryColor bg-whiteColor px-2.5 py-2 rounded-full shadow-md"></i>
         <i class="fa-brands fa-twitter fa-md  text-secondaryColor bg-whiteColor p-2 rounded-full shadow-md"></i>
