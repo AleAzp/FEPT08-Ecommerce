@@ -1,26 +1,26 @@
 <template>
     <div>
         <nav>
-            <ul class="flex flex-row mx-6 sm:mx-12 md:mx-24 gap-5 md:gap-8 mt-2">
-                <li class="navCategories">
+            <ul class="flex flex-wrap mx-6 sm:mx-12 md:mx-24 gap-5 md:gap-5 lg:gap-8 ">
+                    <li class="navCategories">
                     <router-link to="/products/all" exact-active-class="activeLinkCategories">
-                    <div class="">All</div>
+                    <div class="sm:mt-2">All</div>
                     </router-link></li>
         
                     <li class="navCategories"><router-link to="/products/jewelery" exact-active-class="activeLinkCategories">
-                    <div>Jewelery</div>
+                    <div class="sm:mt-2">Jewelery</div>
                     </router-link></li>
 
                     <li class="navCategories"><router-link to="/products/electronics" exact-active-class="activeLinkCategories">
-                    <div>Electronics</div>
+                    <div class="sm:mt-2">Electronics</div>
                     </router-link></li>
 
                     <li class="navCategories"><router-link to="/products/menclothing" exact-active-class="activeLinkCategories">
-                    <div class="">Men</div>
+                    <div class="sm:mt-2">Men</div>
                     </router-link></li>
 
                     <li class="navCategories"><router-link to="/products/womanclothing" exact-active-class="activeLinkCategories">
-                    <div class="">Woman</div>
+                    <div class="sm:mt-2">Woman</div>
                     </router-link></li>
             </ul>
         </nav>
