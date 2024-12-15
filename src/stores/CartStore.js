@@ -4,22 +4,26 @@ export const useProductsInCart = defineStore('productsInCart',{
     state: () => ({
         loading: false,
         error: false,
-        productsCart: [] 
+        productsCart: [],
+        total: 0
     }),
     getters: {  
-    //   filterJewelery: (state) => {return state.products.filter(e => e.category === "jewelery");},
-    },
+        addPrice: (state) => {
+            return state.productsCart.reduce((sum, product) => {
+              return sum + (product.price || 0);  // Add product price if it exists
+            }, 0);
+          },
+        },
   
     actions:{
         addToCart(product) {
-            // if (product) {
-            //     this.productsCart.push(product);
-            // } else {
-            //     console.error("there is no product in your cart yet.");
-            // }
             this.productsCart.push(product)
             console.log(product)
-
         },
-
-}});
+        deleteFromCart(product) {
+            const index = this.productsCart.findIndex(p => p.id === product.id);
+              this.productsCart.splice(index, 1);  // delete from index
+            }
+          
+        }
+});

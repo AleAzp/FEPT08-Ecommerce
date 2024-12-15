@@ -27,7 +27,7 @@ export default {
     return {
       isOpen: false, 
       selectedOption: null, 
-      options: ["By name", "price: high-low", "price: low-high"], 
+      options: ["price: high-low", "price: low-high"], 
     };
   },
   methods: {
