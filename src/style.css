@@ -15,6 +15,12 @@
   .buttonSearch{
     @apply drop-shadow p-2 rounded-3xl px-4 poppins-medium active:bg-secondaryColor bg-primaryColor text-secondaryColor active:text-whiteColor uppercase text-xs sm:text-base
   }
+  .buttonPay{
+    @apply drop-shadow p-2 rounded-3xl px-4 poppins-medium active:bg-secondaryColor bg-hoverColor text-whiteColor uppercase text-xs sm:text-base
+  }
+  .buttonMore{
+    @apply drop-shadow p-2 rounded-3xl px-4 poppins-medium active:bg-hoverColor active:text-whiteColor bg-whiteColor border-2 border-hoverColor text-hoverColor uppercase text-xs sm:text-base
+  }
   .inputText{
     @apply w-44 sm:w-64 border p-2 rounded-3xl px-9 text-secondaryColor border-secondaryColor text-sm sm:text-base
   }

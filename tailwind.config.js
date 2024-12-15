@@ -16,6 +16,8 @@ export default {
       grayColor: '#8B8B8B',
       grayLightColor: '#ECECEC',
       primaryLightColor: '#C0F1A0',
+      primaryExtraColor: '#E9FFDA',
+      grayExtraLightColor: '#F7F7F7',
 
       
     },

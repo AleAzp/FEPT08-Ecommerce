@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex-grow">
         <h2>User view</h2>
     </div>
 </template>
