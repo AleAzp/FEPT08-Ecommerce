@@ -5,7 +5,7 @@
     <div v-show="productStore.error">
         <p class="errorMessage">error...</p>
     </div>
-    <div class="mt-4 grid mx-6 sm:mx-12 md:mx-24 grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-6">
+    <div class="productsGrid">
         <ProductCard :products="productStore.filterProducts"/>
     </div>
 </template>
