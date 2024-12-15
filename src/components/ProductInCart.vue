@@ -9,9 +9,9 @@
     </div>
     
     <div class="flex flex-col flex-1">
-      <h3 class="poppins-semibold text-left text-[12px] sm:text-[16px] line-clamp-2"> {{product.title}} </h3>
-      <p class="poppins-regular text-left text-[10px] sm:text-[14px]"> {{product.category}} </p>
-      <h2 class="poppins-semibold text-left text-[14px] sm:text-[18px]">{{product.price}} $</h2>
+      <h3 class="poppins-semibold text-left text-[14px] sm:text-[16px] line-clamp-2"> {{product.title}} </h3>
+      <p class="poppins-regular text-left text-[12px] sm:text-[14px]"> {{product.category}} </p>
+      <h2 class="poppins-semibold text-left text-[16px] sm:text-[18px]">{{product.price}} $</h2>
     
   <div class="flex justify-left mt-3">
     <div class="flex flex-row gap-8 text-whiteColor bg-whiteColor active:bg-secondaryColor py-1 px-3 rounded-3xl drop-shadow">
@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/CartStore';
+import { useProductsInCart } from '../stores/cartStore';
 export default {
     name: "ProductInCart",
     computed:{

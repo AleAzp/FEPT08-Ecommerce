@@ -8,12 +8,15 @@ export const useProductsInCart = defineStore('productsInCart',{
         total: 0
     }),
     getters: {  
-        addPrice: (state) => {
+        addPrice(state) {
             return state.productsCart.reduce((sum, product) => {
-              return sum + (product.price || 0);  // Add product price if it exists
-            }, 0);
+              return sum + (product.price);  
+            }, 0).toFixed(2);
           },
+        sumTotalPrice(state) {
+            return (parseFloat(this.addPrice) + 20).toFixed(2);
         },
+      },    
   
     actions:{
         addToCart(product) {

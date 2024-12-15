@@ -1,7 +1,8 @@
 <template>
   <body class="min-h-screen flex flex-col ">
-  <header class="flex flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 py-4 bg-white">
-    <img class="hidden sm:flex h-12" src="./assets/logo.png" alt="logo my ecommerce">
+  <header class="sticky top-0 z-20 bg-whiteColor bg-opacity-95">
+    <div class="flex flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 py-4 bg-white">
+    <img class="hidden sm:flex h-10" src="./assets/logo.png" alt="logo my ecommerce">
     <img class="h-8 sm:hidden" src="./assets/logo_xs.png" alt="logo my ecommerce">
     <nav>
       <ul class="flex flex-row gap-8">
@@ -19,12 +20,11 @@
         </router-link></li>
       </ul>
       </nav>
+    </div>
   </header>
   
   <router-view></router-view>
   
-  
-
   <footer class="bg-primaryColor py-10 mt-8">
     <div class="flex flex-col sm:flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 mb-10">
       <img class="hidden sm:flex h-10" src="./assets/logo2.png" alt="logo my ecommerce">
