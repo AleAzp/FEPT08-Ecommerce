@@ -21,7 +21,7 @@ export const useProductsInCart = defineStore('productsInCart',{
     actions:{
         addToCart(product) {
             this.productsCart.push(product)
-            console.log(product)
+            // console.log(product)
         },
         deleteFromCart(product) {
             const index = this.productsCart.findIndex(p => p.id === product.id);

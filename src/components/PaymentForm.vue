@@ -1,5 +1,6 @@
 <template>
     <form class="flex flex-col gap-3 items-center">
+        
         <div class="flex flex-col">
             <div class="flex flex-row items-center justify-center gap-4 ">
             <i class="fa-solid fa-lock"></i>
@@ -32,14 +33,14 @@
                 <div class="flex flex-row  content-between gap-2 sm:gap-4">
                     <div class="flex flex-col">
                         <label for="zipCode">Zip code:</label>
-                        <input id="zipCode" name="zipCode" type="number" v-model="zipCode" class="w-16 sm:w-20" />
+                        <input id="zipCode" name="zipCode" type="number" v-model="zipCode" class="w-20 sm:w-20" />
                     </div>
                     <div class="flex flex-col">
                         <label for="state">State:</label>
                         <input id="state" name="state" type="text" v-model="state" class="w-32 sm:w-36" />
                     </div>
                     <div class="flex flex-col">
-                        <label for="country">Country</label>
+                        <label for="country">Country:</label>
                         <input id="country" name="country" type="text" v-model="country" class="w-28 sm:w-40" />
                     </div>
                 </div>
@@ -60,7 +61,9 @@
                 <input id="cvv" name="ccv" type="number" v-model="cvv"/>
             </div>
             </div>
-            <div class="flex flex-col p-2 gap-2 mt-2">
+                <div class="flex flex-col p-2 gap-2 mt-2">
+                <h3 class="poppins-semibold text-secundaryColor text-md sm:text-xl text-center">Resume</h3>
+
                 <div class="flex justify-between">
                     <p class="poppins-regular text-left text-[14px] sm:text-[16px]">Subtotal</p>
                     <p class="poppins-regular text-left text-[14px] sm:text-[16px]">{{productsInCart.addPrice}} $</p>
@@ -82,7 +85,8 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/CartStore';
+import { useProductsInCart } from '../stores/cartStore';
+import logoBig from '../assets/logo.png';
 export default {
     name: "Payment Form",
     computed:{
@@ -103,6 +107,7 @@ export default {
             expirationDate: "",
             cvv: "",
             savedData: null,
+            logoBig: logoBig
         }
     },
     methods: {

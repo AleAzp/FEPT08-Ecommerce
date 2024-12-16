@@ -32,16 +32,16 @@
         <button type="action" @click="goToProducts"  class="buttonMore mt-2 py-2">Find products!</button>
     </div>
 </div>
-<div v-if="isModalOpen === true" class="fixed inset-0  bg-primaryExtraColor z-50 flex items-center justify-center">
+<div v-if="isModalOpen === true" class="fixed inset-0  bg-grayExtraLightColor z-50 flex items-center justify-center">
     <div class="bg-white w-full h-full sm:rounded-lg shadow-lg relative">
         <!-- Close button -->
         <span 
             @click="closeModal" 
-            class="absolute top-3 right-5 sm:top-4 sm:right-96 text-3xl cursor-pointer text-gray-800">
+            class="absolute top-3 right-4 sm:right-24 lg:right-96 text-3xl cursor-pointer text-gray-800">
             &times;
         </span>
         <!-- Content -->
-        <PaymentForm class=""/>
+        <PaymentForm class="mt-10"/>
     </div>
 </div>
 </template>
@@ -70,7 +70,7 @@ export default {
     },
     methods: {
     goToProducts() {
-      this.$router.push('/products/all'); // Replace with your desired route
+      this.$router.push('/products/all'); 
     },
     // Method to open the modal
     openPopUp() {
