@@ -9,9 +9,9 @@
         </div> 
     </div>
     <SearchBar></SearchBar>
-    <div class="flex flex-col sm:flex-row justify-between items-top gap-4 sm:gap-0 sm:mb-4">
+    <div class="flex flex-col justify-between items-top gap-4 sm:gap-0 sm:mb-4">
         <NavCategories></NavCategories>
-        <Filter class="sm:absolute z-10 sm:right-0 mx-6 sm:mr-12 md:mr-24"></Filter>
+        <Filter :products="productStore.products" class="sm:absolute z-10 sm:right-0 mx-6 sm:mr-12 md:mr-24"></Filter>
     </div>
     
     <router-view></router-view>
@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import banner from '../assets/banner.png';
 import banner2 from '../assets/banner2.png';
 import banner3 from '../assets/banner3.png';
 import SearchBar from "../components/SearchBar.vue";
@@ -31,21 +30,24 @@ import WomanClothing from './WomanClothing.vue';
 import Jewelery from './Jewelery.vue';
 import Electronics from './Electronics.vue';
 import Filter from '../components/Filter.vue';
+import { useProductsAllStore} from '../stores/productStore';
+import ProductCard from '../components/ProductCard.vue';
 
 export default {
     name : "Products",
     components: {
-    SearchBar, Countdown, NavCategories, AllProducts, Jewelery, WomanClothing, MenCothing, Filter, Electronics
+    SearchBar, Countdown, NavCategories, AllProducts, Jewelery, WomanClothing, MenCothing, Filter, Electronics, ProductCard
   },
     data(){
         return {
-            banner: banner,
             banner2: banner2,
-            banner3: banner3
-
+            banner3: banner3,
         }
     },
-}
+    computed:{
+        productStore(){
+            return useProductsAllStore();
+        },},}
 </script>
 
 <style>
