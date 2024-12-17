@@ -6,12 +6,9 @@ An e-commerce web application built with Vue.js and Vite that provides a seamles
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Tech Stack](#tech-stack)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Folder Structure](#folder-structure)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Build tools](#build-tools)
+- [Dependencies](#dependencies)
+- [Use the project](#use-the-project)
 
 ## Project Overview
 This project is a single-page application (SPA) that simulates a fully functional e-commerce platform. Users can view products, sort them by cartegories and price, add items to their cart, and navigate between different pages using Vue Router and Nested Vue Router. This is the final project for the frontend bootcamp at CodeOp cohort FEPT08 2024.
@@ -54,7 +51,7 @@ Mobile-first design scaling across devices.
 - Font Awesome
 - Poppins font family -> https://fonts.google.com/specimen/Poppins
 
-### Step by Step
+### Use the project
 ```bash
 #1 clone repository
 git clone https://github.com/AleAzp/FEPT08-Ecommerce.git
