@@ -2,8 +2,8 @@
   <body class="min-h-screen flex flex-col ">
   <header class="sticky top-0 z-20 bg-whiteColor bg-opacity-95">
     <div class="flex flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 py-4 bg-white">
-    <img class="hidden sm:flex h-10" src="./assets/logo.png" alt="logo my ecommerce">
-    <img class="h-8 sm:hidden" src="./assets/logo_xs.png" alt="logo my ecommerce">
+    <img class="hidden sm:flex h-10" src="./assets/logo.png" @click="goToProducts" alt="logo my ecommerce">
+    <img class="h-8 sm:hidden" src="./assets/logo_xs.png" @click="goToProducts" alt="logo my ecommerce">
     <nav>
       <ul class="flex flex-row gap-8">
         <li class="navMain"><router-link to="/" active-class="activeLink">
@@ -11,8 +11,15 @@
           <i class="fa-solid fa-shirt md:hidden"></i>
         </router-link></li>
         <li class="navMain"><router-link to="/cart" active-class="activeLink">
-          <div class="hidden md:flex">My cart</div>
-          <i class="fa-solid fa-cart-shopping md:hidden"></i>
+          <div v-if="productsInCart.productsCart.length > 0" class="hidden md:flex">My cart ({{ productsInCart.productsCart.length }})</div>
+          <div v-else="productsInCart.productsCart.length > 0" class="hidden md:flex">My cart</div>
+          <div v-if="productsInCart.productsCart.length > 0" class="poppins-medium md:hidden">
+            <i class="fa-solid fa-cart-shopping "></i>
+            ({{ productsInCart.productsCart.length }})
+          </div> 
+          <div v-else="productsInCart.productsCart.length > 0" class="poppins-medium md:hidden">
+            <i class="fa-solid fa-cart-shopping "></i>
+          </div> 
         </router-link></li>
         <li class="navMain"><router-link to="/user" active-class="activeLink">
           <div class="hidden md:flex">My profile</div>
@@ -27,8 +34,8 @@
   
   <footer class="bg-primaryColor py-10 mt-8">
     <div class="flex flex-col sm:flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 mb-10">
-      <img class="hidden sm:flex h-10" src="./assets/logo2.png" alt="logo my ecommerce">
-      <img class="sm:hidden h-10" src="./assets/logo_xs_2.png" alt="logo my ecommerce">
+      <img class="hidden sm:flex h-10" src="./assets/logo2.png" @click="goToProducts" alt="logo my ecommerce">
+      <img class="sm:hidden h-10" src="./assets/logo_xs_2.png" @click="goToProducts" alt="logo my ecommerce">
       <ul class="flex text-center flex-col pt-8 sm:pt-0 sm:flex-row gap-8">
         <li class="navFooter text-sm text">About</li>
         <li class="navFooter text-sm">Privacy & Policy</li>
@@ -38,9 +45,15 @@
     <div class="flex flex-col sm:flex-row justify-between items-center center sm:mx-12 md:mx-24 gap-6 text-center">
       <p class="hidden sm:flex poppins-light text-xs">©2024 Final project frontend bootcamp. Codeop.</p> 
       <ul class="flex flex-row gap-4 items-center">
+        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
         <i class="fa-brands fa-instagram fa-md text-secondaryColor bg-whiteColor px-2.5 py-2 rounded-full shadow-md"></i>
-        <i class="fa-brands fa-twitter fa-md  text-secondaryColor bg-whiteColor p-2 rounded-full shadow-md"></i>
-        <i class=" fa-brands fa-facebook fa-md text-secondaryColor bg-whiteColor p-2 py-2 rounded-full shadow-md"></i>
+        </a>
+        <a href="https://www.x.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-twitter fa-md text-secondaryColor bg-whiteColor p-2 rounded-full shadow-md"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-facebook fa-md text-secondaryColor bg-whiteColor px-2 py-2 rounded-full shadow-md"></i>
+        </a>
       </ul>
       <p class="sm:hidden poppins-light text-xs text-secondaryColor mt-4 sm:mt-0">©2024 Final project frontend bootcamp. Codeop.</p> 
     </div>
@@ -50,6 +63,7 @@
 </template>
 
 <script>
+import { useProductsInCart } from '../src/stores/CartStore';
 import Products from "./vistas/Products.vue";
 import User from "./vistas/User.vue";
 import Cart from "./vistas/Cart.vue";
@@ -63,9 +77,17 @@ export default {
       isProducts: true,
       title: "hola",
     }
+  },
+  computed:{
+    productsInCart(){
+            return useProductsInCart();
+        }},
+  methods: {
+    goToProducts() {
+      this.$router.push('/products/all'); 
+    },
+  },
   }
-  
-}
 </script>
 
 <style>
