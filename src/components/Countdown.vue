@@ -1,10 +1,10 @@
 <template>
     <div class="flex flex-col items-center">
-        <h1 class="poppins-bold text-sm lg:text-3xl md:text-xl">
-            Days until christmas!
+        <h1 class="poppins-bold text-sm lg:text-3xl md:text-xl text-darlColor">
+          Days until Valentine's day!
         </h1>
-        <h2 class="poppins-medium text-[10px] lg:text-lg md:text-sm mb-2 md:mb-4">
-            Santa is coming to town!
+        <h2 class="poppins-medium text-[10px] lg:text-lg md:text-sm mb-2 md:mb-4 text-darlColor">
+          Love is in the cart!
         </h2>
         <div class="flex flex-row text-lg font-mono gap-2 md:gap-4">
             <div class="flex flex-col text-center gap-0.1 md:gap-2">
@@ -32,7 +32,7 @@ export default {
     name: "Countdown",
   data() {
     return {
-      targetDate: "2024-12-25T00:00:00",
+      targetDate: "2025-02-14T00:00:00",
       timeLeft: {
         days: 0,
         hours: 0,

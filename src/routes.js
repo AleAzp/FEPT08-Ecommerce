@@ -9,6 +9,9 @@ import Jewelery from './vistas/Jewelery.vue'
 import MenCothing from './vistas/MenCothing.vue'
 import WomanClothing from './vistas/WomanClothing.vue'
 import Electronics from './vistas/Electronics.vue'
+import Privacy from './vistas/Privacy.vue'
+import Terms from './vistas/Terms.vue'
+import About from './vistas/About.vue'
 
 const routes = [
     {   path: "/",
@@ -40,7 +43,15 @@ const routes = [
     {   path: "/cart",
         name: "Cart",
         component: Cart},
-
+    {   path: "/about",
+        name: "About",
+        component: About},
+    {   path: "/privacy&policy",
+        name: "Privacy",
+        component: Privacy},
+    {   path: "/terms&conditions",
+        name: "Terms",
+        component: Terms},
     
     
 ]

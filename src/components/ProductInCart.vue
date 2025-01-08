@@ -14,8 +14,9 @@
       <h2 class="poppins-semibold text-left text-[16px] sm:text-[18px]">{{product.price}} $</h2>
     
   <div class="flex justify-left mt-3">
-    <div class="flex flex-row gap-8 text-whiteColor bg-whiteColor active:bg-secondaryColor py-1 px-3 rounded-3xl drop-shadow">
+    <div class="items-center flex flex-row gap-4 text-whiteColor bg-whiteColor active:bg-secondaryColor py-1 px-3 rounded-3xl drop-shadow">
       <button @click="deleteFromCart(product)"><i class="fa-solid fa-trash text-[16px] text-hoverColor"></i></button>
+      <span class="text-[14px] font-semibold text-darkColor">{{ product.quantity }}</span>
       <button @click="addToCart(product)"><i class="fa-solid fa-plus text-[16px] text-hoverColor"></i></button>
     </div>
   </div>   
@@ -44,7 +45,7 @@ export default {
     // Delete a product from the cart
     deleteFromCart(product) {
       this.productsInCart.deleteFromCart(product);
-    }
+    },
   }
     
 }

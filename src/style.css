@@ -51,6 +51,12 @@
   label{
     @apply  py-1 poppins-regular text-[12px] sm:text-[16px]
   }
+  .profileButtonsSm{
+    @apply  poppins-regular text-sm flex mx-6 sm:mx-12 md:mx-28 items-center justify-between p-4 drop-shadow rounded-lg bg-grayExtraLightColor hover:bg-grayLightColor max-h-80
+  }
+  .profileButtonsLg{
+    @apply  poppins-regular py-8 sm:py-12 flex items-center justify-center drop-shadow rounded-lg  hover:bg-grayLightColor bg-grayExtraLightColor h-10
+  }
 }
 
 

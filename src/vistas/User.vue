@@ -1,30 +1,106 @@
 <template>
-     <div class="mx-6 sm:mx-12 mb-4 md:mx-28 poppins-semibold text-secundaryColor text-md sm:text-xl">My profile</div>
-    <div class="text-center flex-grow">
-        <div class="flex items-center justify-center h-full">
-            <svg width="685" height="200" viewBox="0 0 685 685" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_135_795)">
-            <path d="M440.485 183.84C529.501 316.987 679.213 220.511 679.213 416.388C679.213 618.888 338.809 763.67 101.213 515.335C-104.751 278.33 76.0651 165.904 209.213 76.8879C342.36 -12.1278 351.469 50.6924 440.485 183.84Z" fill="#E9FFDA"/>
-            <circle cx="427.5" cy="169.388" r="16.5" stroke="#72B646" stroke-width="12"/>
-            <circle cx="483.5" cy="169.388" r="16.5" stroke="#72B646" stroke-width="12"/>
-            <circle cx="539.5" cy="169.388" r="16.5" stroke="#72B646" stroke-width="12"/>
-            <rect x="94.5" y="134.5" width="497" height="374" rx="42.5" stroke="#72B646" stroke-width="15"/>
-            <path d="M96 209H599" stroke="#72B646" stroke-width="15"/>
-            <path d="M228.982 358.686C233.887 345.802 252.113 345.802 257.018 358.686L331.342 553.913C335.08 563.731 327.829 574.25 317.324 574.25H168.676C158.171 574.25 150.92 563.731 154.658 553.913L228.982 358.686Z" fill="white" stroke="#72B646" stroke-width="12"/>
-            <rect x="128" y="556" width="230" height="23" rx="11.5" fill="white" stroke="#72B646" stroke-width="12"/>
-            <path d="M188.275 474.831L315.856 504.654" stroke="#72B646" stroke-width="12"/>
-        <path d="M200.702 424.296L291.831 446.664" stroke="#72B646" stroke-width="12"/>
-        </g>
-        <defs>
-        <clipPath id="clip0_135_795">
-        <rect width="685" height="685" fill="white"/>
-        </clipPath>
-        </defs>
-        </svg>
-        </div>
-        <p class="poppins-regular text-secondaryColor text-[14px] sm:text-[16px]">This page is under construction.</p>
-        <button type="action" @click="goToProducts"  class="buttonMore mt-2 py-2">Find products!</button>
+    <div class="mx-6 sm:mx-12 mb-4 md:mx-28 poppins-semibold text-secundaryColor text-md sm:text-xl">My profile</div>
+    
+
+    <div class="mx-6 sm:mx-12 md:mx-28 flex flex-col items-center justify-center p-4 drop-shadow rounded-lg bg-grayExtraLightColor max-h-80">
+        <div class="absolute top-3 right-4 poppins-regular text-sm text-blue-500 cursor-pointer hover:underline">Edit</div>
+            <img class=" border-whiteColor border-4 h-20 w-20 sm:h-32 sm:w-32 rounded-full object-cover" src="https://media.licdn.com/dms/image/v2/D4E03AQEmdQBizGgDmQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1729677257545?e=1741824000&v=beta&t=EdSJ-NMp89OJmdU05NYicEjzMS_LQi4BJm20jbPCkm0">
+            <div class="poppins-semibold text-secundaryColor text-lg sm:text-xl">Alejandra Azpurua</div>
+        <div class="poppins-regular text-secundaryColor text-xs sm:text-sm">aleazpurua@gmail.com</div>
     </div>
+<div class="flex-grow sm:hidden">
+    <div class="grid grid-cols-1 gap-4 lg:gap-10 mt-4 justify-evenly">
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>My adress</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-regular fa-calendar-days"></i>
+                <div>My orders</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-solid fa-arrow-rotate-left"></i>
+                <div>My returns</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-regular fa-credit-card"></i>
+                <div>My payments</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-solid fa-lock"></i>
+                <div>Passwords</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="profileButtonsSm">
+            <div class="flex flex-row gap-6 items-center justify-center">
+                <i class="fa-solid fa-gear"></i>
+                <div>Settings</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+    </div>
+</div>
+<div class="flex-grow">
+    <div class="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-5 sm:mx-12 md:mx-28 ">
+        <div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-solid fa-location-dot text-2xl"></i>
+                <div>My adress</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden"></i>
+        </div>
+        <div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-regular fa-calendar-days text-2xl"></i>
+                <div>My orders</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden"></i>
+        </div>
+        <div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-solid fa-arrow-rotate-left text-2xl"></i>
+                <div>My returns</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden text-2xl"></i>
+        </div>
+        <div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-regular fa-credit-card text-2xl"></i>
+                <div>My payments</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden"></i>
+        </div>
+        <div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-solid fa-lock text-2xl"></i>
+                <div>Passwords</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden"></i>
+        </div><div class="profileButtonsLg">
+            <div class="flex flex-row sm:flex-col gap-6 sm:gap-1 items-center justify-center">
+                <i class="fa-solid fa-gear text-2xl"></i>
+                <div>Settings</div>
+            </div>
+            <i class="fa-solid fa-chevron-right sm:hidden"></i>
+        </div>
+  
+    </div>
+</div>
+
 </template>
 
 <script>
