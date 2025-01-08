@@ -19,14 +19,35 @@ export const useProductsInCart = defineStore('productsInCart',{
       },    
   
     actions:{
-        addToCart(product) {
-            this.productsCart.push(product)
-            // console.log(product)
-        },
-        deleteFromCart(product) {
-            const index = this.productsCart.findIndex(p => p.id === product.id);
-              this.productsCart.splice(index, 1);  // delete from index
-            }
-          
+      addToCart(product) {
+        const existingProduct = this.productsCart.find(p => p.id === product.id);
+        if (existingProduct) {
+          existingProduct.quantity++;
+        } else {
+          this.productsCart.push({ ...product, quantity: 1 });
         }
-});
+      },
+      deleteFromCart(product) {
+        const existingProduct = this.productsCart.find(p => p.id === product.id);
+          if (existingProduct.quantity > 1) {
+            existingProduct.quantity--;
+          } else {
+            this.productsCart = this.productsCart.filter(p => p.id !== product.id);
+          }
+      },
+      increaseProductQuantity(product) {
+        const existingProduct = this.productsCart.find(p => p.id === product.id);
+        if (existingProduct) {
+          existingProduct.quantity++;
+        }
+      },
+      decreaseProductQuantity(product) {
+        const existingProduct = this.productsCart.find(p => p.id === product.id);
+        if (existingProduct && existingProduct.quantity > 1) {
+          existingProduct.quantity--;
+        } else if (existingProduct && existingProduct.quantity === 1) {
+          this.deleteFromCart(product);
+        }
+      },
+    },
+  });

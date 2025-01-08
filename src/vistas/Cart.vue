@@ -20,7 +20,7 @@
                 </div>
                 <div class="flex justify-between ">
                     <p class="poppins-bold text-left text-[16px] sm:text-[20px]">TOTAL</p>
-                    <p class="poppins-bold text-left text-[16px] sm:text-[20px]">{{productsInCart.sumTotalPrice}} $</p>
+                    <p class="poppins-bold text-left text-[16px] sm:text-[20px]">{{totalPrice}} $</p>
                 </div>
             </div>
             <button type="action" @click="openPopUp" class="buttonPay mt-2 py-2">ORDER NOW!</button>
@@ -86,6 +86,9 @@ export default {
         addToCartStore(){
             return useProductsInCart();
         },
+        totalPrice() {
+            return this.productsInCart.productsCart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
+        }
     },
     methods: {
     goToProducts() {

@@ -11,11 +11,11 @@
           <i class="fa-solid fa-shirt md:hidden"></i>
         </router-link></li>
         <li class="navMain"><router-link to="/cart" active-class="activeLink">
-          <div v-if="productsInCart.productsCart.length > 0" class="hidden md:flex">My cart ({{ productsInCart.productsCart.length }})</div>
-          <div v-else="productsInCart.productsCart.length > 0" class="hidden md:flex">My cart</div>
-          <div v-if="productsInCart.productsCart.length > 0" class="poppins-medium md:hidden">
+          <div v-if="totalProducts > 0" class="hidden md:flex">My cart ({{ totalProducts }})</div>
+          <div v-else="totalProducts > 0" class="hidden md:flex">My cart</div>
+          <div v-if="totalProducts > 0" class="poppins-medium md:hidden">
             <i class="fa-solid fa-cart-shopping "></i>
-            ({{ productsInCart.productsCart.length }})
+            ({{ totalProducts }})
           </div> 
           <div v-else="productsInCart.productsCart.length > 0" class="poppins-medium md:hidden">
             <i class="fa-solid fa-cart-shopping "></i>
@@ -34,12 +34,25 @@
   
   <footer class="bg-primaryColor py-10 mt-8">
     <div class="flex flex-col sm:flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 mb-10">
-      <img class="hidden sm:flex h-10" src="./assets/logo2.png" @click="goToProducts" alt="logo my ecommerce">
-      <img class="sm:hidden h-10" src="./assets/logo_xs_2.png" @click="goToProducts" alt="logo my ecommerce">
+      <a href="https://github.com/AleAzp/FEPT08-Ecommerce" target="_blank" rel="noopener noreferrer">
+        <img class="hidden sm:flex h-10" src="./assets/Github-logo.png" alt="logo my ecommerce">
+      </a>
+      <a href="https://github.com/AleAzp/FEPT08-Ecommerce" target="_blank" rel="noopener noreferrer">
+        <img class="sm:hidden h-10" src="./assets/Github-logo.png" alt="logo my ecommerce">
+      </a>
       <ul class="flex text-center flex-col pt-8 sm:pt-0 sm:flex-row gap-8">
-        <li class="navFooter text-sm text">About</li>
+        <li class="navFooter text-sm"><router-link to="/about" active-class="activeLink">
+          <div>About</div>
+        </router-link></li>
+        <li class="navFooter text-sm"><router-link to="/privacy&policy" active-class="activeLink">
+          <div>Privacy & Policy</div>
+        </router-link></li>
+        <li class="navFooter text-sm"><router-link to="/terms&conditions" active-class="activeLink">
+          <div>Terms & Condition</div>
+        </router-link></li>
+        <!-- <li class="navFooter text-sm text">About</li>
         <li class="navFooter text-sm">Privacy & Policy</li>
-        <li class="navFooter text-sm">Terms & Condition</li>
+        <li class="navFooter text-sm">Terms & Condition</li> -->
       </ul>
     </div>
     <div class="flex flex-col sm:flex-row justify-between items-center center sm:mx-12 md:mx-24 gap-6 text-center">
@@ -80,8 +93,11 @@ export default {
   },
   computed:{
     productsInCart(){
-            return useProductsInCart();
-        }},
+        return useProductsInCart();
+    },
+    totalProducts() {
+        return this.productsInCart.productsCart.reduce((total, product) => total + product.quantity, 0);
+    },},
   methods: {
     goToProducts() {
       this.$router.push('/products/all'); 

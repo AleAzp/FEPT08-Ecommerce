@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import banner2 from '../assets/banner2.png';
-import banner3 from '../assets/banner3.png';
+import bannersv2 from '../assets/bannersv2.png';
+import bannersv1 from '../assets/bannersv1.png';
 import SearchBar from "../components/SearchBar.vue";
 import Countdown from "../components/Countdown.vue";
 import NavCategories from '../components/NavCategories.vue';
@@ -40,8 +40,8 @@ export default {
   },
     data(){
         return {
-            banner2: banner2,
-            banner3: banner3,
+            banner2: bannersv1,
+            banner3: bannersv2,
         }
     },
     computed:{
