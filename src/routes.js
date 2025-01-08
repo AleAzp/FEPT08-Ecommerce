@@ -12,6 +12,7 @@ import Electronics from './vistas/Electronics.vue'
 import Privacy from './vistas/Privacy.vue'
 import Terms from './vistas/Terms.vue'
 import About from './vistas/About.vue'
+import SearchResults from './vistas/SearchResults.vue'
 
 const routes = [
     {   path: "/",
@@ -33,7 +34,11 @@ const routes = [
                 component: Electronics},
             {   path: "/products/womanclothing",
                 name: "WomanClorhing",
-                component: WomanClothing}]},
+                component: WomanClothing},
+            {   path: "/products/searchresults",
+                name: "SearchResults",
+                component: SearchResults},
+            ]},
     {   path: "/user",
         name: "User",
         component: User},

@@ -4,7 +4,7 @@ export const useProductsAllStore = defineStore('productAll',{
     state: () => ({
         loading: false,
         error: false,
-        products: [] 
+        products: [],
     }),
     getters: {  
       filterProducts:(state) => state.products,
@@ -12,6 +12,13 @@ export const useProductsAllStore = defineStore('productAll',{
       filterMen: (state) => {return state.products.filter(e => e.category === "men's clothing");},
       filterWoman: (state) => {return state.products.filter(e => e.category === "women's clothing");},
       filterElectronics: (state) => {return state.products.filter(e => e.category === "electronics");},
+      filterSearch: (state) => (query) => {
+        query = query.trim(); // Trim the query string
+        if (!query) return []; // Return an empty array if the query is empty
+        return state.products.filter((product) =>
+          product.title.toLowerCase().includes(query.toLowerCase())
+        );
+      },
 
     },
   

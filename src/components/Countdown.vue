@@ -1,27 +1,27 @@
 <template>
     <div class="flex flex-col items-center">
-        <h1 class="poppins-bold text-sm lg:text-3xl md:text-xl text-darlColor">
+        <h1 class=" text-whiteColor poppins-bold text-sm lg:text-3xl md:text-xl text-darlColor">
           Days until Valentine's day!
         </h1>
-        <h2 class="poppins-medium text-[10px] lg:text-lg md:text-sm mb-2 md:mb-4 text-darlColor">
+        <h2 class=" text-whiteColor poppins-medium text-[10px] lg:text-lg md:text-sm mb-2 md:mb-4 text-darlColor">
           Love is in the cart!
         </h2>
         <div class="flex flex-row text-lg font-mono gap-2 md:gap-4">
             <div class="flex flex-col text-center gap-0.1 md:gap-2">
                 <h3 class="numberChart">{{ timeLeft.days }}</h3>
-                <p class="numberTitle">Days</p> 
+                <p class="numberTitle text-whiteColor">Days</p> 
             </div>
             <div class="flex flex-col text-center gap-0.1 md:gap-2">
                 <h3 class="numberChart">{{ timeLeft.hours }} </h3>
-                <p class="numberTitle">Hours </p>
+                <p class="numberTitle text-whiteColor">Hours </p>
             </div>
             <div class="flex flex-col text-center gap-0.1 md:gap-2">
                 <h3 class="numberChart">{{ timeLeft.minutes }} </h3>
-                <p class="numberTitle">Minutes </p>
+                <p class="numberTitle text-whiteColor">Minutes </p>
             </div>
             <div class="flex flex-col text-center gap-0.1 md:gap-2">
                 <h3 class="numberChart">{{ timeLeft.seconds }} </h3>
-                <p class="numberTitle">Seconds</p>
+                <p class="numberTitle  text-whiteColor">Seconds</p>
             </div>
         </div>
     </div>
