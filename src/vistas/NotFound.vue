@@ -27,15 +27,24 @@
        </svg>
        </div>
        <p class="poppins-regular text-secondaryColor text-[14px] sm:text-[16px]">This page is not found!</p>
-       <button type="action" @click="goToProducts"  class="buttonMore mt-2 py-2">Find products!</button>
+       <button type="action" @click="goToProducts"  class="buttonMore mt-2 py-2">Back to products!</button>
    </div>
 </template>
 
 <script>
+import { useProductsInCart } from '../stores/cartStore';
+import ProductInCart from '../components/ProductInCart.vue';
+import PaymentForm from '../components/PaymentForm.vue';
 export default {
-    name : "NotFound",
-
-    
+    name : "Not found",
+    components:{
+        ProductInCart, PaymentForm
+    },
+    methods: {
+    goToProducts() {
+      this.$router.push('/products/all'); 
+    },
+    },
 }
 </script>
 

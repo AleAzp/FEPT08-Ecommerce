@@ -32,11 +32,12 @@ import Electronics from './Electronics.vue';
 import Filter from '../components/Filter.vue';
 import { useProductsAllStore} from '../stores/productStore';
 import ProductCard from '../components/ProductCard.vue';
+import SearchResults from './SearchResults.vue';
 
 export default {
     name : "Products",
     components: {
-    SearchBar, Countdown, NavCategories, AllProducts, Jewelery, WomanClothing, MenCothing, Filter, Electronics, ProductCard
+    SearchBar, Countdown, NavCategories, AllProducts, Jewelery, WomanClothing, MenCothing, Filter, Electronics, ProductCard, SearchResults
   },
     data(){
         return {
