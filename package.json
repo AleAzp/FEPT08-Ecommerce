@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "preview": "vite preview",
-    "postinstall": "prisma generate --schema=./prisma/schema.prisma",
-    "build": "prisma generate && vite build",
+    "postinstall": "npx prisma generate --schema=./prisma/schema.prisma",
+    "build": "npx prisma generate && vite build",
     "start": "vite"
   },
   "dependencies": {
