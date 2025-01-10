@@ -5,7 +5,7 @@
         <p class="poppins-regular text-left text-[12px] sm:text-[14px]"><i class="fa-solid fa-star"></i> {{product.rating.rate}} (rating)</p>
         <div class="flex flex-row justify-between items-end">
                     <h2 class="poppins-semibold text-left text-[16px] sm:text-[18px]">{{product.price}} $</h2>
-                    <button @click="CartStore.addToCart(product)" class="text-whiteColor bg-hoverColor active:bg-secondaryColor py-3 px-4 rounded-lg drop-shadow"><i class="fa-solid fa-cart-shopping"></i></button>
+                    <button @click="cartStore.addToCart(product)" class="text-whiteColor bg-hoverColor active:bg-secondaryColor py-3 px-4 rounded-lg drop-shadow"><i class="fa-solid fa-cart-shopping"></i></button>
         </div>    
     </div>
 
@@ -27,7 +27,7 @@ export default {
         productStore(){
             return useProductsAllStore();
         },
-        CartStore(){
+        cartStore(){
             return useProductsInCart();
         }
     },
