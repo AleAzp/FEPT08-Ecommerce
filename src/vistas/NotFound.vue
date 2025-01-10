@@ -32,13 +32,11 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/cartStore';
 import ProductInCart from '../components/ProductInCart.vue';
-import PaymentForm from '../components/PaymentForm.vue';
 export default {
     name : "Not found",
     components:{
-        ProductInCart, PaymentForm
+        ProductInCart
     },
     methods: {
     goToProducts() {
