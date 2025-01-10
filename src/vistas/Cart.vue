@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/cartStore';
+import { useProductsInCart } from '../stores/cartStore.js';
 import ProductInCart from '../components/ProductInCart.vue';
 import PaymentForm from '../components/PaymentForm.vue';
 export default {
@@ -80,6 +80,9 @@ export default {
         };
     },
     computed:{
+        cartStore(){
+            return useProductsInCart();
+        },
         productsInCart(){
             return useProductsInCart();
         },
@@ -90,6 +93,7 @@ export default {
             return this.productsInCart.productsCart.reduce((total, product) => total + product.price * product.quantity, 0).toFixed(2);
         }
     },
+   
     methods: {
     goToProducts() {
       this.$router.push('/products/all'); 
