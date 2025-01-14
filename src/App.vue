@@ -44,10 +44,10 @@
         <li class="navFooter text-sm"><router-link to="/about" active-class="activeLink">
           <div>About</div>
         </router-link></li>
-        <li class="navFooter text-sm"><router-link to="/privacy&policy" active-class="activeLink">
+        <li class="navFooter text-sm"><router-link to="/privacy-policy" active-class="activeLink">
           <div>Privacy & Policy</div>
         </router-link></li>
-        <li class="navFooter text-sm"><router-link to="/terms&conditions" active-class="activeLink">
+        <li class="navFooter text-sm"><router-link to="/terms-conditions" active-class="activeLink">
           <div>Terms & Condition</div>
         </router-link></li>
         <!-- <li class="navFooter text-sm text">About</li>
