@@ -54,7 +54,7 @@ Mobile-first design scaling across devices.
 ### Use the project
 ```bash
 #1 clone repository
-git clone https://github.com/AleAzp/FEPT08-Ecommerce.git
+git clone https://github.com/AleAzp/FP-Ecommerce.git
 cd FEPT08-Ecommerce
 
 #2 Install dependencies
