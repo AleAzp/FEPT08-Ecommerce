@@ -34,7 +34,7 @@
 <script>
 import ProductInCart from '../components/ProductInCart.vue';
 export default {
-    name : "Not found",
+    name : "NotFound",
     components:{
         ProductInCart
     },
