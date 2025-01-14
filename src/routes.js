@@ -51,10 +51,10 @@ const routes = [
     {   path: "/about",
         name: "About",
         component: About},
-    {   path: "/privacy&policy",
+    {   path: "/privacy-policy",
         name: "Privacy",
         component: Privacy},
-    {   path: "/terms&conditions",
+    {   path: "/terms-conditions",
         name: "Terms",
         component: Terms},
     
