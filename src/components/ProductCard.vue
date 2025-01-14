@@ -14,7 +14,7 @@
 
 <script>
 import { useProductsAllStore } from '../stores/productStore';
-import { useProductsInCart } from '../stores/cartStore'
+import { useProductsInCart } from '../stores/CartStore'
 
 export default {
     name: "ProductCard",
