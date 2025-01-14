@@ -34,10 +34,10 @@
   
   <footer class="bg-primaryColor py-10 mt-8">
     <div class="flex flex-col sm:flex-row justify-between items-center center mx-6 sm:mx-12 md:mx-24 mb-10">
-      <a href="https://github.com/AleAzp/FEPT08-Ecommerce" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/AleAzp/FP-Ecommerce" target="_blank" rel="noopener noreferrer">
         <img class="hidden sm:flex h-10" src="./assets/Github-logo.png" alt="logo my ecommerce">
       </a>
-      <a href="https://github.com/AleAzp/FEPT08-Ecommerce" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/AleAzp/FP-Ecommerce" target="_blank" rel="noopener noreferrer">
         <img class="sm:hidden h-10" src="./assets/Github-logo.png" alt="logo my ecommerce">
       </a>
       <ul class="flex text-center flex-col pt-8 sm:pt-0 sm:flex-row gap-8">
