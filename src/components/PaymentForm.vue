@@ -85,7 +85,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/cartStore';
+import { useProductsInCart } from '../stores/CartStore';
 import logoBig from '../assets/logo.png';
 export default {
     name: "Payment Form",
