@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/CartStore';
+import { useProductsInCart } from '../stores/cartStore';
 export default {
     name: "ProductInCart",
     computed:{

@@ -66,7 +66,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from '../stores/CartStore.js';
+import { useProductsInCart } from '../stores/cartStore.js';
 import ProductInCart from '../components/ProductInCart.vue';
 import PaymentForm from '../components/PaymentForm.vue';
 export default {
