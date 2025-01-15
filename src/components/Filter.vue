@@ -21,7 +21,7 @@
 
 <script>
 import { useProductsAllStore } from '../stores/productStore';
-import { useProductsInCart } from '../stores/CartStore'
+import { useProductsInCart } from '../stores/cartStore'
 export default {
   name: "Dropdown",
   props: {

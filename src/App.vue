@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import { useProductsInCart } from './stores/CartStore';
+import { useProductsInCart } from './stores/cartStore';
 import Products from "./vistas/Products.vue";
 import User from "./vistas/User.vue";
 import Cart from "./vistas/Cart.vue";
